@@ -1,0 +1,5 @@
+---
+MAILCOW_HOSTNAME: "mail.lycr.eu"
+MAILCOW_TOKEN: "secret"
+PROMETHEUS_TOKEN: "secret"
+...
