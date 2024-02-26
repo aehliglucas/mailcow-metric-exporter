@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 
+	mailcowapi "github.com/aehliglucas/mailcow-metric-exporter/mailcowAPI"
 	"gopkg.in/yaml.v3"
 )
 
@@ -51,5 +52,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(conf)
+	mailcowClient := mailcowapi.NewClient("https", conf.MailcowHost, conf.MailcowToken)
+	fmt.Println(mailcowClient)
 }
